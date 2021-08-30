@@ -1,0 +1,183 @@
+.feedbacks {
+    background-color: #000000;
+    
+}
+
+.opinion-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.opinion__img {
+    width: 25%;
+    height: 50%;
+    position: relative;
+    filter: grayscale(1);
+    flex-grow: 1;
+
+    @each $number in 1, 2, 3, 4, 5, 6, 7, 8 {
+    &_#{$number} {
+        background-image: url('../img/screen-6/#{$number}x2.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        }
+
+
+    &:hover {
+        .opinion__content {
+            // display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(#000000, 0.5);
+            
+                @include tablets {
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
+}
+
+.opinion__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #ffffff;
+    z-index: 3;
+    padding: rem(30px) rem(30px) rem(30px) rem(20px);
+    display: none;
+
+    @include transit2 {
+        padding: rem(10px);
+    }
+
+}
+
+.opinion__title {
+    margin: 0;
+    font-family: gagalinregular;
+    font-size: rem(14px);
+
+    @include tablets {
+        margin: 0;
+    }
+
+    @include transit2 {
+        font-size: rem(24px);
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.opinion__text {
+    line-height: 167%;
+    font-family: ubuntulight;
+    font-size: rem(14px);
+
+    @include tablets {
+        margin: 0;
+    }
+
+    @include transit2 {
+        display: none;
+    }
+} 
+
+.opinion__btn {
+    @include btn(#2f3234);
+    width: rem(110px);
+    font-size: rem(13px);
+    // padding-top: rem(10px);
+    margin-top: rem(15px);
+
+    &:hover {
+        background-color: #1f2122;
+    }
+
+    @include tablets {
+        display: inline-block;
+        margin-top: rem(0px);
+    }
+
+    @include transit2 {
+        display: none;
+    }
+
+    &_more {
+        display: none;
+
+        @include transit2 {
+            display: inline-block;
+            margin-top: rem(15px);
+            width: 80%;
+        }
+    }
+}
+
+.modal-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#2f3234, 0.95);
+    z-index: 10;
+
+    cursor:pointer;
+
+    display: none;
+}
+
+.modal {
+    background: #ffffff;
+    width: 90%;
+
+    border-radius: 5px;
+
+    position: absolute;
+    top: 35%; 
+    left: 5%; 
+    z-index: 15;
+    
+    padding: rem(30px) rem(20px);
+    opacity: 0;
+
+    display: none;
+}
+
+.modal__close {
+    position: absolute;
+    top: rem(15px);
+    right: rem(15px);
+    z-index: 100;
+}
+
+.modal__title {
+    font-size: 14px;
+    font-family: gagalinregular;
+    color: #2f3234;
+    padding: 0;
+    margin: 0;
+}
+
+.modal__text {
+    font-size: 14px;
+    font-family: ubuntulight;
+    color: #2f3234;
+    padding: 0;
+    line-height: 24px;
+}

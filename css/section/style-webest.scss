@@ -1,0 +1,166 @@
+.webest {
+    background: url(../img/screen-2/cheese-dip.png) no-repeat left rem(25px), 
+            url(../img/screen-2/seeds.png) no-repeat left rem(190px), 
+            url(../img/screen-2/tomato-slices.png) no-repeat rem(56px) bottom, 
+            url(../img/screen-2/tomato.png) no-repeat right bottom, 
+            url(../img/screen-2/cheese-lists.png) no-repeat right bottom, 
+            url(../img/screen-2/lettuce.png) no-repeat right rem(53px), 
+            url(../img/screen-2/wood.png) no-repeat;
+    background-size: auto,auto,auto,auto,auto,auto, cover;
+    width: 100%;
+    height: 100%;
+
+    @include phones {
+    background: url(../img/screen-2/tomato-slices.png) no-repeat left bottom, 
+            url(../img/screen-2/tomato.png) no-repeat right bottom, 
+            url(../img/screen-2/cheese-lists.png) no-repeat right bottom, 
+            url(../img/screen-2/wood.png) no-repeat;
+    background-size: auto,auto, auto, cover;
+    }
+}
+
+.webest-bg {
+    justify-content: center;
+
+}
+
+.webest-header {
+    display: flex;
+    align-items: center;
+
+    &__words {
+        @include gagalin(#2f3234);
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        margin-bottom: rem(60px);
+        // margin-top: rem(55px);
+
+        @include transit2 {
+            font-size: rem(50px);
+            margin-bottom: rem(30px);
+        }
+    }
+
+    @include transit {
+        // margin-top: rem(55px);
+    }
+
+    @include transit2 {
+        margin: rem(0px);
+    }
+}
+
+.webest-content {
+    display: flex;
+    margin: rem(30px) rem(90px);
+    justify-content: space-between;
+    align-items: baseline;
+
+    @include tablets {
+        margin: rem(100px) rem(30px);
+    }
+
+    @include transit2 {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+}
+
+.bestpoint {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    margin-left: rem(40px);
+
+    @include tablets { 
+        margin-left: rem(10px);
+    }
+    
+    @include transit2 {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        min-width: rem(100px);
+        margin-left: 0;
+        align-items: stretch;
+        margin-bottom: rem(50px);
+    }
+
+
+    &:first-child {
+        margin-left: rem(0px);
+    }
+}
+
+    
+.bestpoint__img {
+        margin: 0 auto;
+
+        &_meat {
+        width: rem(97px);
+        height: rem(89px);
+        fill: #e25028;
+        }
+
+        &_hand {
+        width: rem(73px);
+        height: rem(85px);
+        fill: #f8b43a;
+        }
+
+        &_natural {
+        width: rem(88px);
+        height: rem(75px);
+        fill: #8ac03e;
+        }
+    
+    @include tablets {
+        margin-bottom: rem(25px);
+    }
+
+    @include transit2 {
+        width: rem(150px);
+        margin: 0;
+        margin-right: rem(20px);
+    }
+}
+
+.bestpoint__icon {
+    width: 100%;
+    height: 100%;
+}
+
+.bestpoint__content {
+    text-align: center;
+
+    @include transit2 {
+        text-align: left;
+        width: 70%;
+    }
+}
+
+.bestpoint__title {
+        margin: 0;
+        font-family: lifehackmedium;
+        font-size: rem(24px);
+        color: #2f3234;
+        line-height: rem(28px);
+}
+
+.bestpoint__text {
+
+    p { 
+        font-family: ubuntulight;
+        font-size: rem(14px);
+        color: #6d6d6c
+        }
+
+}
+
+
+

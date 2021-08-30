@@ -1,0 +1,126 @@
+.map {
+    background: #000000 url("../img/screen-8//map-bg.png") no-repeat center center;
+    background-size: cover;
+    // position: relative;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+}
+
+.map-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.yandex-map {
+    width: 100%;
+    height: 100%;
+}
+
+.map-title {
+    position: absolute;
+    left: rem(-9999px);
+
+}
+
+.footer-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: rem(60px);
+    background-color: #0f0f0f;
+    
+    display: flex;
+    justify-content: center;
+
+    @include transit2 {
+        height: rem(115px);
+    }
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: rem(60px);
+    padding: rem(10px) rem(20px);
+
+    &__left {
+        width: 50%;
+        text-align: left;
+
+        @include transit2 {
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+
+    &__right {
+        width: 50%;
+        text-align: right;
+
+        @include transit2 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    @include transit2 {
+        flex-direction: column;
+        height: rem(115px);
+    }
+}
+
+.address {
+    margin-left: rem(60px);
+
+    @include tablets {
+        margin-left: rem(20px);
+    }
+}
+
+.address__place {
+    font-size: rem(14px);
+    line-height: rem(24px);
+    font-family: ubuntulight;
+    font-style: normal;
+}
+
+
+.address__phone {
+    color: #e45028;
+    font-style: normal;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        height: rem(12px);
+        width: rem(11px);
+        background: url('../img/screen-8//phone.svg') no-repeat center center;
+        fill: #e45028;
+        margin-right: rem(5px);
+    }
+}
+
+.socials {
+    margin-right: rem(60px);
+    margin-top: rem(10px);
+
+    @include tablets {
+        margin-right: rem(20px);
+    }
+
+    &__item {
+        fill: #ffffff;
+        opacity: 0.3;
+        margin-left: rem(15px);
+        
+        &:hover {
+            opacity: 1;
+        }
+
+    }
+}

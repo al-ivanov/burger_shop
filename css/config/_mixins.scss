@@ -1,0 +1,31 @@
+@mixin gagalin($color) {
+    font-family: gagalinregular;
+    font-size: rem(72px);
+    text-transform: uppercase;
+    color: $color;
+}
+
+
+@mixin btn($bgcolor) {
+    display: inline-block;
+    background-color: $bgcolor;
+    border: none;
+    border-radius: 5px;
+    min-height: rem(35px);
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    font-family: ubuntumedium;
+    color: #ffffff;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
+

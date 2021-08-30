@@ -1,0 +1,34 @@
+@function rem($px) {
+    @return $px / 16px+0rem;
+}
+
+@mixin transit {
+    @media screen and (max-width: $transit) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin transit2 {
+    @media screen and (max-width: $transit2) {
+        @content;
+    }
+}
+
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin transit3 {
+    @media screen and (max-width: $transit3) {
+        @content;
+    }
+}

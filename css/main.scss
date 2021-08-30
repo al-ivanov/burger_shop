@@ -1,0 +1,28 @@
+$transit: 870px; 
+$tablets: 768px;
+$transit2: 630px;
+$phones: 480px;
+$transit3: 360px;
+
+@import "normalize.css";
+//config
+@import "config/mixins.scss";
+//adaptive
+@import "config/media.scss";
+//layout
+@import "layout/fonts.scss";
+@import "layout/base.scss";
+@import "layout/adjustment.scss";
+//section-styles
+@import "section/style-greeting.scss";
+@import "section/style-webest.scss";
+@import "section/style-slider.scss";
+@import "section/style-team.scss";
+@import "section/style-menu.scss";
+@import "section/style-feedback.scss";
+@import "section/style-order.scss";
+@import "section/style-map.scss";
+// dots
+@import "section/aside.scss";
+//fullsize-menu;
+@import "section/fullsize-menu.scss";
